@@ -12,10 +12,10 @@ public class NBody {
 
     public static Planet[] readPlanets(String file) {
         In in = new In(file);
-        in.readLine();
-        in.readLine();
-        Planet[] planets = new Planet[5];
-        for (int i = 0; i < 5; i++) {
+        int num = in.readInt();
+        Planet[] planets = new Planet[num];
+        in.readDouble();
+        for (int i = 0; i < num; i++) {
             double xp = in.readDouble();
             double yp = in.readDouble();
             double xv = in.readDouble();
